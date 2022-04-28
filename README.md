@@ -67,15 +67,25 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ ```int potPin= A5;
+int ledPin= 2;
 
-
-
-
-
-
-
-
+void setup ()
+{
+  pinMode (potPin, INPUT);
+  pinMode (ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+void loop (){
+  int PotMeasure = analogRead(A5);
+ if (PotMeasure>=450)
+ {
+   digitalWrite(2, HIGH);
+ }
+  else
+    digitalWrite(2, LOW);
+}
+```
 
 **
 **Simulation output:** 
@@ -83,7 +93,7 @@ CIRCUIT DIAGRAM
 
 
 [My image](username.github.com/repository/img/image.jpg)
-
+![output](experiment2output.png)
 
 
 
